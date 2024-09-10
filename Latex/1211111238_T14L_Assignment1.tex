@@ -1,0 +1,183 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{apacite}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{enumerate}
+\usepackage[margin=0.5in]{geometry}
+
+\renewcommand{\baselinestretch}{1.0}
+
+\newcommand\nd{\textsuperscript{nd}\xspace}
+\newcommand\rd{\textsuperscript{rd}\xspace}
+\newcommand\nth{\textsuperscript{th}\xspace} %\th is taken already
+
+\setlength\parindent{0pt} % set paragraph indent to zero
+
+% fill up your name, ID and paper title here
+\author{
+\textbf{Reegan Roy Justin} \quad \textbf{1211106979} \\ Introduction, Literature Review,  Objectives and Reviewed Report \vspace{7pt} \\
+\textbf{Athiyamah A/P Bala Krishna} \quad \textbf{1211109739} \\ Abstract, Literature Review, Discussion and Reviewed Report \vspace{7pt} \\
+\textbf{Akid Syazwan bin Nor Azman Shah} \quad \textbf{1211111238} \\ Future Work and Latex Writing/Formatting \vspace{7pt} \\
+\textbf{Muhammad Hazim Bin Muhd Shafiq Zulhilmi Kee} \quad \textbf{1221304263} \\ Methodology, Conclusion and Reviewed Report \vspace{7pt}
+}
+\title{ \textbf{The Effectiveness of Various Algorithms in Reducing Energy Consumption in Residential Buildings} }
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\renewcommand{\contentsname}{Contents} 
+\tableofcontents
+\newpage
+
+\section{Abstract}
+\quad Energy consumption in residential buildings contributes significantly to global energy demand, affecting both environmental sustainability and household expenses. As sustainability becomes a priority, various strategies and technologies are being developed to reduce energy consumption and improve efficiency. Among these solutions, machine learning (ML) algorithms have emerged as essential tools for predicting and optimizing energy use, particularly in managing heating load (HL) and cooling load (CL), which are typically the most energy-consuming operations in homes. This research explores the effectiveness of several ML algorithms, such as Artificial Neural Networks (ANN), Support Vector Machines (SVM), Deep Neural Networks (DNN), and Gaussian Process Regression (GPR), in reducing energy consumption in residential buildings. Through the analysis of different datasets and residential building configurations, this study compares these algorithms to assess their accuracy and impact on energy savings. Results show that advanced models, particularly GPR and DNN, achieve notable improvements in prediction accuracy and overall energy efficiency in residential contexts. Moreover, integrating smart energy management systems powered by the Internet of  Things (IoT) enhances the potential to further reduce energy consumption, fostering more sustainable living environments in residential settings. This research highlights the importance of selecting the most appropriate algorithms to address the unique challenges of residential energy consumption and emphasizes the critical role of smart technologies in promoting energy efficiency.
+\vspace{7pt}
+
+\section{Introduction and Problem Statement}
+
+\subsection{Introduction}
+\quad Energy consumption in residential buildings has become a critical issue in the global effort to mitigate environmental damage and reduce costs. The rising trends of urbanization, population growth, and a significant increase in remote or work from home environments due to the COVID-19 pandemic have all contributed to a substantial growth in energy demand within the residential sector. This surge in energy consumption has placed considerable pressure on both natural resources and economic structures worldwide, highlighting the urgent need for effective energy management solutions. Among the various energy-consuming systems in homes, heating and cooling operations are particularly significant, as they account for a substantial portion of the total energy demand. These systems are crucial for maintaining comfortable living conditions but also represent major contributors to overall energy use. Addressing the inefficiencies in these systems is essential for reducing energy consumption and its environmental impact, emphasizing the need for innovative approaches and technologies to enhance energy efficiency in residential buildings.
+\vspace{7pt}
+
+\quad Traditionally, energy consumption in homes has been managed using physical models and engineering simulations. While these methods have provided insights, they often fail to predict real-world energy use accurately, especially given fluctuating weather conditions, occupant behavior, and energy usage patterns. These limitations have led to an increasing interest in data-driven approaches like machine learning (ML), which offer more adaptive and precise tools for predicting energy consumption in homes.
+\vspace{7pt}
+
+\quad Machine learning models excel in analyzing large amounts of historical data to identify patterns that might not be obvious with traditional methods. Unlike physical models, ML algorithms learn and refine their predictions continuously based on new data, making them particularly useful in optimizing energy consumption in homes. Given the complexity of managing heating load (HL) and cooling load (CL) in different home environments—where factors such as geography, materials, and occupant habits vary—ML techniques are proving indispensable for achieving energy efficiency in residential design.
+\vspace{7pt}
+
+\quad Recent advancements in Machine Learning (ML), including models like —Artificial Neural Networks (ANN), Support Vector Machines (SVM), Deep Neural Networks (DNN), and Gaussian Process Regression (GPR)— have shown promising results in optimizing energy consumption in homes. These algorithms not only deliver accurate energy consumption predictions but also provide actionable insights for homeowners and building managers to make better decisions on reducing energy usage. Furthermore, smart energy management systems, powered by Internet of Things (IoT), enable real-time monitoring and control of energy use, significantly boosting the potential for energy efficiency in homes.
+\vspace{7pt}
+
+\quad This research aims to examine the effectiveness of different Machine Learning (ML) algorithms in reducing energy consumption in residential buildings, with a specific focus on heating and cooling loads. In addition, this study investigates how smart energy management systems, when integrated with advanced Machine Learning (ML) models, can further optimize energy use. By evaluating the performance of various Machine Learning (ML) techniques in residential contexts, this research contributes to the growing body of knowledge on using technology to support the development of more energy-efficient homes, which is essential for addressing both environmental and economic challenges.
+
+\subsection{Problem Statement}
+\quad Global energy consumption continues to surge, with residential buildings contributing a significant share, especially due to heating and cooling demands. Managing these demands effectively is crucial to reducing both costs and environmental impacts. However, factors such as fluctuating weather conditions, variable occupancy, and the unique structural characteristics of individual homes complicate energy management. Traditional methods, such as physical models and engineering simulations, often struggle to predict the dynamic nature of energy consumption in residential settings accurately.
+\vspace{7pt}
+
+\quad While Machine Learning (ML) algorithms present promising solutions for predicting and optimizing energy consumption, there is a lack of clarity about which algorithms work best in residential contexts. While studies have explored models like ANN, SVM, DNN, and GPR, most of this research has focused on commercial or industrial applications, leaving a gap in residential applications. Additionally, there is insufficient comparative analysis to assess the effectiveness of these algorithms in real-world residential environments, particularly when it comes to optimizing heating and cooling loads.
+\vspace{7pt}
+
+\quad Moreover, the rise of smart energy management systems, powered by IoT, holds significant potential for improving energy efficiency in homes. These systems allow for continuous monitoring and dynamic adjustments based on real-time data. However, their effectiveness in residential environments is still unclear and largely depends on how well homeowners engage with and utilize these technologies. Many households lack the knowledge or willingness to adopt smart energy solutions, which limits their potential impact.
+\vspace{7pt}
+
+\quad Addressing these gaps requires a comprehensive evaluation of ML algorithms in the context of residential buildings, alongside an exploration of how smart energy management systems can be integrated to further reduce energy consumption. Without a deeper understanding of these factors, the residential sector will continue to face challenges in achieving optimal energy efficiency, leading to higher costs and increased environmental impacts.
+
+\subsection{Objectives}
+\begin {itemize}
+    \item \textbf{An in-depth evaluation of key machine learning algorithms—Artificial Neural Networks (ANN), Support Vector Machines (SVM), Deep Neural Networks (DNN), and Gaussian Process Regression (GPR)—is essential for understanding their effectiveness in predicting energy consumption within residential buildings.} This assessment must take into account a variety of datasets, building types, and external factors, such as local climate conditions, seasonal variations, and patterns of occupancy, all of which significantly influence energy usage. Each algorithm's performance should be analyzed not only in terms of prediction accuracy but also in its ability to generalize across different contexts. The complexities of building structures, along with fluctuating external influences like temperature, humidity, and occupancy rates, require a robust model capable of adapting to diverse conditions, making it critical to compare these algorithms comprehensively to determine which performs best under varying scenarios.
+    \item \textbf{A thorough examination of the accuracy and computational efficiency of these machine learning algorithms—ANN, SVM, DNN, and GPR—is necessary to determine their effectiveness in predicting heating and cooling loads in residential homes.} By evaluating their performance, insight can be gained into how well each algorithm predicts energy usage under different environmental conditions, helping to identify the most suitable model for this specific application. Additionally, this analysis should focus on understanding which algorithms strike the optimal balance between prediction accuracy and computational complexity, particularly in the context of real-time energy management. Achieving high prediction accuracy is crucial for energy optimization, but it must also be balanced with computational efficiency to ensure the system can respond swiftly in real-world settings without overburdening processing resources.
+    \item \textbf{An investigation into how smart energy management systems, powered by the Internet of Things (IoT), can enhance the performance of machine learning (ML) algorithms is crucial for improving energy efficiency in residential buildings.} By leveraging the interconnected network of IoT devices, including smart sensors, meters, and thermostats, these systems can collect real-time data on various aspects of home energy usage, providing a rich source of information for ML models to process and analyze. This research should explore how real-time data from these devices can be effectively integrated with ML algorithms to optimize energy consumption patterns in homes. The ability of ML models to adapt to changing conditions, such as occupancy, appliance usage, and external climate factors, can be significantly enhanced by the constant stream of data provided by IoT devices. Ultimately, this approach holds the potential to achieve greater energy efficiency by enabling precise and timely adjustments to energy use, reducing waste, and lowering utility costs for homeowners.
+    \item \textbf{Identifying the challenges and opportunities in implementing smart energy management systems in residential buildings requires a careful examination of how various factors, such as resident behavior, awareness, and education, impact the effectiveness of these systems.} One of the key challenges lies in the variability of resident engagement with smart technologies, as individual behaviors and energy usage habits can greatly influence the system's ability to optimize energy consumption. Additionally, a lack of awareness or understanding of how these systems work may lead to sub-optimal usage or misuse, reducing their overall effectiveness.
+    \item \textbf{provide comprehensive recommendations for integrating machine learning (ML) algorithms and smart energy systems, which is essential for supporting sustainable energy policies.} By combining these advanced technologies, policymakers can drive significant improvements in energy efficiency within the residential sector. ML algorithms, coupled with smart systems like IoT-enabled devices, allow for real-time monitoring, prediction, and optimization of energy consumption, helping reduce waste and lower costs.
+\end{itemize}
+
+\section{Literature Review}
+\subsection{Introduction to Literature Review}
+\quad As global energy demand continues to rise and concerns about environmental sustainability become more pressing, research on energy consumption in residential buildings has gained significant importance. Improving energy efficiency in buildings is not only crucial for reducing greenhouse gas emissions but also for mitigating the broader impacts of climate change. In this context, technological advancements have introduced machine learning (ML) algorithms as powerful tools for optimizing energy consumption. These algorithms can provide accurate predictions of heating, cooling, and overall energy use, offering a means to enhance energy efficiency and minimize waste.
+\vspace{7pt}
+
+\quad This literature review ventures studies that explore the effectiveness of various ML models in predicting and reducing energy consumption within residential settings. It examines models such as Gradient Descent Optimization, Deep Neural Networks (DNN), and Explainable AI, evaluating how these approaches contribute to more precise energy management. By systematically reviewing these studies, the review aims to highlight the key methodologies, performance metrics, and findings that have emerged from recent research. This comprehensive analysis not only sheds light on the strengths and limitations of different ML models but also underscores their potential to drive advancements in energy efficiency and sustainability in the residential sector.
+
+\subsection{Energy Efficiency Model for Residential Buildings Using Supervised Machine Learning Algorithm}
+\quad This article introduces the Energy Efficiency Building - Gradient Descent Optimization (E2B-GDO) model, which improves energy efficiency in residential buildings by predicting heating and cooling loads\cite{Aslam21}. The model uses key parameters such as glazing area, wall surface, relative density, and building height. With a high training accuracy of 99.98\% and a validation accuracy of 98.00\%, the model demonstrates its effectiveness in optimizing energy consumption. The study emphasizes the growing need for advanced energy management techniques, noting the slowing global progress in energy efficiency since 2015. The E2B-GDO model offers a valuable opportunity to reduce energy consumption during the early design stages of residential buildings.
+\vspace{7pt}
+
+\subsection{Building Energy Consumption Prediction for Residential Buildings Using Deep Learning and Other Machine Learning Techniques}
+\quad This study compares several ML algorithms, including DNN, RF, and SVM, for predicting annual energy consumption in residential buildings. Using a dataset of 5,000 residential buildings, the authors found that DNN achieved the highest accuracy, reaching 95\%. The study highlights the importance of using ML models during the early design phase to prevent the construction of energy-inefficient buildings. The research emphasizes how these models provide architects and engineers with the data-driven insights necessary to optimize energy use and reduce carbon emissions in residential environments. \cite{Olu22}
+\vspace{7pt}
+
+\subsection{Advancing Energy Performance Efficiency in Residential Buildings for Sustainable Design: Integrating Machine Learning and Optimized Explainable AI (AIX)}
+\quad This paper focuses on improving energy efficiency in residential buildings by integrating ML techniques with Explainable AI (AIX) to enhance both efficiency and model interpretability. The study applies algorithms like GPR and BT to predict energy consumption, with GPR-M3 emerging as the most effective for predicting heating and cooling loads. The authors emphasize the importance of combining advanced ML techniques with AIX, allowing stakeholders to trust and understand the outcomes of these predictive models. This integration not only improves energy efficiency but also informs better decision-making in sustainable building design. \cite{Badr24}
+\vspace{7pt}
+
+\subsection{Predicting Energy Consumption in Residential Buildings Using Advanced Machine Learning Algorithms}
+\quad This research investigates the use of advanced ML models, particularly PSO integrated with RF, to predict energy consumption in residential buildings. A Self-Organizing Map (SOM) was used for dimensionality reduction, and a stacking ensemble method improved prediction accuracy, reaching 95.4\%. Additionally, SHAP was used to identify the most influential factors affecting energy consumption, with water pipe temperature emerging as significant. This study illustrates the value of combining multiple ML techniques to enhance prediction accuracy, contributing to the development of efficient energy management systems for homes. \cite{Din23}
+\vspace{7pt}
+
+\subsection{Summary of the Literature Review}
+\quad The literature reviewed highlights the importance of ML algorithms in optimizing energy consumption in residential buildings, especially for predicting heating and cooling loads. Models such as ANN, SVM, DNN, and GPR have shown significant potential in improving energy efficiency. The integration of IoT-driven smart energy management systems enhances these models' ability to adjust energy use dynamically in real-time. However, challenges remain in understanding the optimal algorithms for specific residential settings and how behavioral factors influence the adoption of smart technologies. This review sets the foundation for evaluating ML algorithms and exploring the role of smart energy systems in optimizing energy use in homes.
+\vspace{7pt}
+
+\section{Methodology}
+\subsection{Energy-Efficiency Model for Residential Buildings Using Supervised Machine Learning Algorithm}
+\quad To improve the efficiency of energy use in residential buildings, the E2B-GDO system model was developed, using gradient descent optimization to forecast energy performance. This system leverages a cloud-based setup with a five-layer structure, including sensory, preprocessing, and prediction layers. The process begins with data cleaning of initial inputs like relative compactness and overall height, followed by feeding these cleaned inputs into the prediction layer. Here, gradient descent optimization estimates heating and cooling loads. The model also integrates fitness and time-series modeling techniques, using a feed-forward network trained with the Levenberg–Marquardt algorithm and a Nonlinear Autoregressive Exogenous (NARX) model to tackle nonlinear forecasting challenges. By comparing these methods, the model aims to identify the most accurate and efficient algorithm for predicting energy consumption, thereby guiding better energy management interventions.
+\vspace{7pt}
+
+\subsection{Building Energy Consumption Prediction for Residential Buildings Using Deep Learning and Other Machine Learning Techniques}
+\quad The research methodology involves evaluating nine machine learning algorithms for predicting annual energy consumption using a dataset from the UK. The study uses Random Forest (RF) and Extra Tree Classifier for feature selection, identifying ten key variables, such as total floor area and number of habitable rooms. These selected features are used to train and test various models, including Artificial Neural Network (ANN), Deep Neural Network (DNN), Random Forest (RF), Gradient Boosting (GB), K-Nearest Neighbors (KNN), Support Vector Machine (SVM), Decision Tree (DT), and Linear Regression (LR). The dataset is split into training and testing sets in a 70:30 ratio \cite{Olu22}. Each model is evaluated based on performance metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-Squared (R²). The study includes models like DNN, which has three hidden layers and uses the 'RELU' activation function, and GB, which uses a learning rate of 0.1. The aim is to determine which algorithm provides the most accurate and reliable predictions for energy consumption.
+\vspace{7pt}
+
+\subsection{Advancing Energy Performance Efficiency in Residential Buildings for Sustainable Design: Integrating Machine Learning and Optimized Explainable AI (AIX)}
+\quad The research investigates the efficiency of various AI-based algorithms for predicting and optimizing energy consumption in buildings. It uses a dataset of simulated building cases to apply three key AI techniques: Gaussian Process Regression (GPR), Boosted Trees (BT), and Emotional Neural Networks (ENN). GPR is a Bayesian method known for modeling nonlinear relationships and providing uncertainty estimates, though it can be computationally demanding. BT employs decision trees to make predictions, offering clear visualization but possibly facing overfitting issues. ENN integrates emotion modeling into neural networks to enhance interaction, but it struggles with accurate emotion recognition. The study evaluates these models using 10-fold cross-validation and performance metrics like RMSE, MAE, PCC, and MAPE to determine which algorithm provides the most accurate and reliable predictions for energy consumption patterns in residential buildings.
+\vspace{7pt}
+
+\subsection{Predicting Energy Consumption in Residential Buildings Using Advanced Machine Learning Algorithms}
+\quad To determine the most effective algorithm for improving energy efficiency in heating systems, this study employed a causal inference approach. This method involved developing a detailed causal graph model, grounded in domain-specific knowledge, to analyze how various features and factors influence energy consumption patterns. By leveraging techniques such as the back-door criterion, front-door criterion, instrumental variables, and mediation analysis, the study was able to estimate the causal effects of different features, with a particular focus on calculating the average treatment effect (ATE) for each feature. These advanced techniques enabled a more nuanced understanding of how individual variables impact energy usage, providing insights that go beyond simple correlations.
+\vspace{7pt}
+
+\quad To ensure the robustness and validity of the findings, several refutation techniques were utilized, including random common causes and data subset tests. These methods helped to eliminate biases and confirm the reliability of the causal relationships identified. The comprehensive nature of this approach was designed to pinpoint the most critical variables affecting energy consumption, ultimately aiding in the selection of the optimal machine learning algorithm for enhancing the efficiency of heating systems. By combining causal inference with robust refutation methods, the study provided a strong foundation for identifying actionable insights and improving the overall performance of energy-saving technologies in residential heating systems.
+\vspace{7pt}
+
+\section{Result and Discussions}
+\subsection{Energy-Efficiency Model for Residential Buildings Using Supervised Machine Learning Algorithm}
+\quad The evaluation of the E2B-GDO system model demonstrated its exceptional performance compared to traditional methods like random forests and decision trees for predicting building energy performance. Tested using MATLAB, the E2B-GDO model achieved a high accuracy rate of 99.98\% in training and 98.00\% in validation \cite{Aslam21}, significantly outperforming random forests, which had accuracies of 96.68\% and 95.57\% in training and validation, respectively. The decision tree method showed lower accuracies at 93\% and 92\%. Moreover, the E2B-GDO model had notably lower missing rates, with 0.02\% in training and 2\% in validation, compared to higher rates in other methods. It also performed well in mean square error (MSE) assessments, further confirming its effectiveness and efficiency in predicting heating and cooling loads. 
+
+\begin{table}[h]
+\centering
+\caption{Accuracy Comparison of E2B-GDO and Baseline Models}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Model}       & \textbf{Accuracy(Training)} & \textbf{Accuracy(Validation)} & \textbf{Missing Rates(Validation)} \\ \hline
+    random forests                & 96.68\% & 95.57\% & 4.43\% \\ \hline
+    decision trees                & 93\% & 92\% & 8\% \\ \hline
+    \textbf{E2B-GDO}      & \textbf{99.98\%} & \textbf{98.00\%} & \textbf{2\%} \\ \hline
+    \end{tabular}
+\label{tab:accuracy_comparison}
+\end{table}
+\vspace{7pt}
+
+\quad These results strongly underscore the reliability of the E2B-GDO system, highlighting its consistent performance and showcasing its significant potential as a valuable and innovative tool for improving and optimizing energy management in residential buildings. By providing enhanced control and monitoring capabilities, the system demonstrates its ability to contribute to more efficient and sustainable energy use, which could lead to substantial benefits in terms of both environmental impact and cost savings for homeowners.
+\vspace{7pt}
+
+\subsection{Building Energy Consumption Prediction for Residential Buildings Using Deep Learning and Other Machine Learning Techniques}
+\quad The study finds that the Deep Neural Network (DNN) is the most effective model for predicting annual energy consumption, surpassing other algorithms based on metrics such as MAE, MSE, RMSE, and R². The DNN model achieved the lowest error values and the highest R², outperforming models like Artificial Neural Network (ANN) and Gradient Boosting (GB), which also performed well. Stacking and Linear Regression (LR) showed the lowest performance but were quicker to train. The analysis indicates that DNN consistently delivers better results compared to ANN and GB, although it requires longer training times. Sensitivity analysis confirms DNN's top performance even with house-specific datasets, while Decision Tree (DT) is noted for its computational efficiency. Comparisons with other studies show that while some models like SVM perform well on smaller datasets, DNN and GB offer robust performance on larger datasets, making them suitable for energy consumption prediction and early design phases.
+\vspace{7pt}
+
+\subsection{Advancing Energy Performance Efficiency in Residential Buildings for Sustainable Design: Integrating Machine Learning and Optimized Explainable AI (AIX)}
+\quad The GPR-M3 model achieved the highest accuracy for predicting Cooling Load (CL), with the best Pearson Coefficient of Correlation (PCC) and the lowest Root Mean Square Error (RMSE) during both calibration and verification. It significantly outperformed other models, reducing RMSE by up to 60.3\% \cite{Badr24}. The BT-M3 model also performed well, showing notable RMSE reductions, while the ENN-M3 model excelled in Mean Absolute Error (MAE) and Mean Absolute Percentage Error (MAPE). SHAP analysis revealed that features like Glazing Area (GA) and Surface Area (SA) are crucial for CL predictions. This detailed understanding of feature impacts enhances model interpretability, supports data-driven design decisions, and aligns with sustainability goals, improving the transparency and reliability of AI models for building energy efficiency.
+\vspace{7pt}
+
+\subsection{Predicting Energy Consumption in Residential Buildings Using Advanced Machine Learning Algorithms}
+\quad The study evaluated several machine learning models for predicting building energy consumption. Random Forest, LightGBM, and XGBoost were found to be the most accurate models, while Neural Networks did not perform well in terms of accuracy and training efficiency. The Stacking Model, which combines these methods, showed high accuracy but had significantly longer training times. SHAP analysis highlighted that features such as water temperature, outdoor temperature, water volume, and heating area were most critical for energy consumption. Additionally, the PSO-optimized Random Forest method proved effective by focusing on the most relevant features, reducing computational complexity, and improving performance. While the Stacking Model offered slightly better accuracy, it was less practical due to its extended training times. The study emphasizes the importance of incorporating causal relationships into machine learning models to enhance prediction accuracy and guide effective energy-saving strategies, such as upgrading heating system materials to minimize energy loss.
+\vspace{7pt}
+
+\section{Conclusion}
+\quad This research has examined the effectiveness of various ML algorithms in reducing energy consumption in residential buildings, focusing on heating and cooling loads (HL and CL), which are among the most energy-intensive operations in homes. The results show that advanced ML models, such as DNN and GPR, provide superior prediction accuracy compared to other algorithms like SVM and ANN. These findings highlight the potential of ML-driven energy management systems in optimizing energy consumption in residential buildings.
+\vspace{7pt}
+
+\quad Furthermore, the integration of IoT-powered smart energy management systems significantly amplifies the effectiveness of ML algorithms by facilitating real-time monitoring and dynamic adjustments of energy usage. These advanced systems leverage a network of interconnected sensors, smart meters, and automated controls to continuously collect and transmit data on various aspects of residential energy consumption. This continuous flow of real-time data enables ML algorithms to make more accurate and timely predictions about energy needs, allowing for precise adjustments to heating, cooling, and overall energy use.
+\vspace{7pt}
+
+\quad Nevertheless, challenges remain, particularly regarding computational efficiency and user adoption of smart technologies. While DNN and GPR provide highly accurate predictions, their computational complexity can hinder real-time applications. Additionally, the success of smart energy systems largely depends on how well residents engage with and use these technologies. Understanding and addressing behavioral factors is critical to maximizing energy savings.
+\vspace{7pt}
+
+\quad In conclusion, this research emphasizes the importance of carefully selecting the most suitable machine learning (ML) algorithms and integrating them with advanced smart energy management systems to achieve optimal energy efficiency in residential buildings. The choice of ML models, such as Deep Neural Networks (DNN), Support Vector Machines (SVM), and Gradient Descent Optimization, plays a pivotal role in accurately predicting and managing energy consumption. However, the effectiveness of these algorithms is greatly enhanced when combined with IoT-powered smart systems that provide real-time data and adaptive control mechanisms. By leveraging both data-driven insights and automation, these systems can optimize heating, cooling, and overall energy usage, leading to significant reductions in energy waste.
+
+
+\section{Future work}
+\quad Although this research has demonstrated the potential of ML algorithms in optimizing energy consumption in residential buildings, several avenues for further exploration remain. Future studies should explore hybrid models that combine the strengths of different algorithms, such as decision trees with DNN or GPR, to improve both accuracy and computational efficiency. Expanding the dataset to include a wider variety of residential buildings, covering different geographic locations, architectural styles, and occupancy behaviors, could help validate the models across a broader context.
+\vspace{7pt}
+
+\quad Moreover, integrating behavioral data with ML models would provide deeper insights into how residents' habits impact energy consumption, as understanding user behavior is crucial for maximizing the effectiveness of smart energy systems. Emerging technologies such as blockchain for secure energy trading and edge computing for localized data processing also present opportunities for further optimizing energy consumption in residential settings. Lastly, future research should investigate how government policies and incentives can promote the adoption of these technologies, as supportive regulatory frameworks and financial backing can accelerate the integration of ML-driven smart energy management systems in the residential sector.
+
+\newpage
+%References
+\bibliographystyle{apacite}
+\bibliography{MyBib}
+
+
+\end{document}
+
